@@ -40,7 +40,7 @@ Search for text content in local file system.
 - `isRegex` (optional): Use regular expression
 - `isCaseSensitive` (optional): Case sensitive search
 - `filePattern` (optional): File name matching pattern
-- `maxCount` (optional): Maximum number of results
+- `maxCount` (optional): Maximum number of matches per file
 - `contextLines` (optional): Context lines to show
 
 ### 2. Everything File Name Search

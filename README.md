@@ -40,7 +40,7 @@ KitX 聚合搜索插件是一个纯命令行的搜索接口插件，为 KitX 提
 - `isRegex` (可选): 是否使用正则表达式
 - `isCaseSensitive` (可选): 是否区分大小写
 - `filePattern` (可选): 文件名匹配模式
-- `maxCount` (可选): 最大结果数
+- `maxCount` (可选): 单文件最大匹配行数
 - `contextLines` (可选): 上下文行数
 
 ### 2. Everything 文件名搜索
