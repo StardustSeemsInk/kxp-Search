@@ -1,0 +1,10 @@
+{
+    "SelfLoad": false,
+    "LoaderName": "KitX.Loader.CSharp",
+    "LoaderVersion": "v1.0.0",
+    "LoaderLanguage": "CSharp",
+    "LoaderFramework": "Console",
+    "LoaderRunType": 0,
+    "SupportOS": [ 10 ],
+    "Tags": {}
+}

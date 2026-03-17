@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>1.0.0</Version>
+        <FileVersion>$(Version)</FileVersion>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="kxp_Search.Test\**" />
+      <EmbeddedResource Remove="kxp_Search.Test\**" />
+      <None Remove="kxp_Search.Test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="C:\Dev\KitX\KitX Standard\KitX Contracts\KitX.Contract.CSharp\KitX.Contract.CSharp.csproj" />
+      <ProjectReference Include="C:\Dev\KitX\KitX Standard\KitX Shared\KitX.Shared.CSharp\KitX.Shared.CSharp.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="LoaderStruct.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="PluginStruct.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="config.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

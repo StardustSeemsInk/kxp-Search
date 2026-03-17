@@ -1,0 +1,113 @@
+﻿{
+    "Name": "kxp_Search",
+    "Version": "1.0.0",
+    "DisplayName": {
+        "zh-cn": "KitX 聚合搜索插件",
+        "zh-tw": "KitX 聚合搜索插件",
+        "en-us": "KitX Aggregate Search Plugin"
+    },
+    "AuthorName": "StarInk",
+    "AuthorLink": "https://github.com/StardustSeemsInk",
+    "PublisherName": "Crequency",
+    "PublisherLink": "https://catrol.cn",
+    "SimpleDescription": {
+        "zh-cn": "统一的搜索接口，支持 Ripgrep、Everything、SearXNG",
+        "zh-tw": "統一的搜索接口，支持 Ripgrep、Everything、SearXNG",
+        "en-us": "Unified search interface for Ripgrep, Everything, SearXNG"
+    },
+    "ComplexDescription": {
+        "zh-cn": "KitX 聚合搜索插件，提供统一的搜索接口。支持 Ripgrep 文本搜索、Everything(ES) 文件名搜索、SearXNG 网络搜索。",
+        "zh-tw": "KitX 聚合搜索插件，提供統一的搜索接口。支持 Ripgrep 文本搜索、Everything(ES) 文件名搜索、SearXNG 網絡搜索。",
+        "en-us": "KitX Aggregate Search Plugin - Unified search interface supporting Ripgrep text search, Everything(ES) file search, and SearXNG web search."
+    },
+    "TotalDescriptionInMarkdown": {
+        "zh-cn": "# KitX 聚合搜索插件\n\n统一的搜索接口插件，支持以下搜索工具：\n\n## 功能\n\n- Ripgrep 文本搜索\n- Everything(ES) 文件名搜索\n- SearXNG 网络搜索\n\n## 使用方法\n\n通过 KitX Workflow 调用相应的 Function。",
+        "zh-tw": "# KitX 聚合搜索插件\n\n統一的搜索接口插件，支持以下搜索工具：\n\n## 功能\n\n- Ripgrep 文本搜索\n- Everything(ES) 文件名搜索\n- SearXNG 網絡搜索\n\n## 使用方法\n\n通過 KitX Workflow 調用相應的 Function。",
+        "en-us": "# KitX Aggregate Search Plugin\n\nUnified search interface plugin supporting:\n\n## Features\n\n- Ripgrep text search\n- Everything(ES) file name search\n- SearXNG web search\n\n## Usage\n\nCall the corresponding Function via KitX Workflow."
+    },
+    "IconInBase64": "",
+    "PublishDate": "2024-01-01T00:00:00.000Z",
+    "LastUpdateDate": "2024-01-01T00:00:00.000Z",
+    "IsMarketVersion": false,
+    "RootStartupFileName": "kxp_Search.dll",
+    "Tags": {},
+    "Functions": [
+        {
+            "Name": "RipgrepSearch",
+            "DisplayNames": {
+                "zh-cn": "Ripgrep 文本搜索",
+                "en-us": "Ripgrep Text Search"
+            },
+            "ReturnValueType": "List<SearchResultItem>",
+            "Parameters": [
+                { "Name": "keyword", "Type": "string", "IsOptional": false, "DisplayNames": { "zh-cn": "关键词", "en-us": "Keyword" } },
+                { "Name": "path", "Type": "string", "IsOptional": true, "DisplayNames": { "zh-cn": "搜索路径", "en-us": "Search Path" } },
+                { "Name": "isRegex", "Type": "bool", "IsOptional": true, "DisplayNames": { "zh-cn": "正则表达式", "en-us": "Regex" } },
+                { "Name": "isCaseSensitive", "Type": "bool", "IsOptional": true, "DisplayNames": { "zh-cn": "区分大小写", "en-us": "Case Sensitive" } },
+                { "Name": "filePattern", "Type": "string", "IsOptional": true, "DisplayNames": { "zh-cn": "文件模式", "en-us": "File Pattern" } },
+                { "Name": "maxCount", "Type": "int", "IsOptional": true, "DisplayNames": { "zh-cn": "最大结果数", "en-us": "Max Count" } },
+                { "Name": "contextLines", "Type": "int", "IsOptional": true, "DisplayNames": { "zh-cn": "上下文行数", "en-us": "Context Lines" } }
+            ]
+        },
+        {
+            "Name": "EverythingSearch",
+            "DisplayNames": {
+                "zh-cn": "Everything(ES) 文件名搜索",
+                "en-us": "Everything(ES) File Search"
+            },
+            "ReturnValueType": "List<SearchResultItem>",
+            "Parameters": [
+                { "Name": "keyword", "Type": "string", "IsOptional": false, "DisplayNames": { "zh-cn": "关键词", "en-us": "Keyword" } },
+                { "Name": "path", "Type": "string", "IsOptional": true, "DisplayNames": { "zh-cn": "搜索路径", "en-us": "Search Path" } },
+                { "Name": "isRegex", "Type": "bool", "IsOptional": true, "DisplayNames": { "zh-cn": "正则表达式", "en-us": "Regex" } },
+                { "Name": "isCaseSensitive", "Type": "bool", "IsOptional": true, "DisplayNames": { "zh-cn": "区分大小写", "en-us": "Case Sensitive" } },
+                { "Name": "maxResults", "Type": "int", "IsOptional": true, "DisplayNames": { "zh-cn": "最大结果数", "en-us": "Max Results" } },
+                { "Name": "fileType", "Type": "string", "IsOptional": true, "DisplayNames": { "zh-cn": "文件类型", "en-us": "File Type" } }
+            ]
+        },
+        {
+            "Name": "SearxngSearch",
+            "DisplayNames": {
+                "zh-cn": "SearXNG 网络搜索",
+                "en-us": "SearXNG Web Search"
+            },
+            "ReturnValueType": "List<SearchResultItem>",
+            "Parameters": [
+                { "Name": "keyword", "Type": "string", "IsOptional": false, "DisplayNames": { "zh-cn": "关键词", "en-us": "Keyword" } },
+                { "Name": "category", "Type": "string", "IsOptional": true, "DisplayNames": { "zh-cn": "分类", "en-us": "Category" } },
+                { "Name": "maxResults", "Type": "int", "IsOptional": true, "DisplayNames": { "zh-cn": "最大结果数", "en-us": "Max Results" } },
+                { "Name": "language", "Type": "string", "IsOptional": true, "DisplayNames": { "zh-cn": "语言", "en-us": "Language" } },
+                { "Name": "safeSearch", "Type": "bool", "IsOptional": true, "DisplayNames": { "zh-cn": "安全搜索", "en-us": "Safe Search" } }
+            ]
+        },
+        {
+            "Name": "CheckToolAvailability",
+            "DisplayNames": {
+                "zh-cn": "检查工具可用性",
+                "en-us": "Check Tool Availability"
+            },
+            "ReturnValueType": "Dictionary<string, bool>",
+            "Parameters": []
+        },
+        {
+            "Name": "GetConfig",
+            "DisplayNames": {
+                "zh-cn": "获取配置",
+                "en-us": "Get Config"
+            },
+            "ReturnValueType": "PluginConfig",
+            "Parameters": []
+        },
+        {
+            "Name": "SetConfig",
+            "DisplayNames": {
+                "zh-cn": "设置配置",
+                "en-us": "Set Config"
+            },
+            "ReturnValueType": "void",
+            "Parameters": [
+                { "Name": "configJson", "Type": "string", "IsOptional": false, "DisplayNames": { "zh-cn": "配置 JSON", "en-us": "Config JSON" } }
+            ]
+        }
+    ]
+}

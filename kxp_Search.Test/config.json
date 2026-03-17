@@ -1,0 +1,25 @@
+{
+  "ripgrep": {
+    "executablePath": "rg",
+    "defaultPath": ".",
+    "defaultFilePattern": "*",
+    "isEnabled": true,
+    "timeoutSeconds": 10
+  },
+  "everything": {
+    "executablePath": "C:\\Program Files\\Everything\\es.exe",
+    "isEnabled": true,
+    "timeoutSeconds": 10
+  },
+  "searxng": {
+    "instanceUrl": "http://localhost:4567/",
+    "apiKey": "",
+    "defaultCategory": "general",
+    "isEnabled": true,
+    "timeoutSeconds": 10
+  },
+  "general": {
+    "maxResultsPerSource": 100,
+    "defaultMaxResults": 20
+  }
+}
